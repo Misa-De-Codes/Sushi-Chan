@@ -2,10 +2,11 @@ import { REST, Routes } from 'discord.js';
 import { config } from 'dotenv';
 import { data as helpData } from './commands/help.js';
 import { data as pingData } from './commands/ping.js';
+import { data as waifuData } from './commands/waifu.js';
 
 config(); // for .env
 
-const commands = [helpData.toJSON(), pingData.toJSON()];
+const commands = [helpData.toJSON(), pingData.toJSON(), waifuData.toJSON()];
 
 const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 

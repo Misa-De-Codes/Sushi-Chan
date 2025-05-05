@@ -5,6 +5,7 @@ import { Client, Collection, GatewayIntentBits } from 'discord.js';
 import { config } from 'dotenv';
 import { execute as helpExecute } from './commands/help.js';
 import { execute as pingExecute } from './commands/ping.js';
+import { execute as waifuExecute } from './commands/waifu.js';
 
 config();
 
@@ -13,6 +14,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const commands = new Collection();
 commands.set('help', helpExecute);
 commands.set('ping', pingExecute);
+commands.set('waifu', waifuExecute);
 
 client.on('ready', () => {
   console.log(`🟢 Logged in as ${client.user.tag}`);
