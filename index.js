@@ -6,6 +6,7 @@ import { config } from 'dotenv';
 import { execute as helpExecute } from './commands/help.js';
 import { execute as pingExecute } from './commands/ping.js';
 import { execute as waifuExecute } from './commands/waifu.js';
+import { execute as rockPaperScissor } from './commands/help.js';
 
 config();
 
@@ -15,6 +16,7 @@ const commands = new Collection();
 commands.set('help', helpExecute);
 commands.set('ping', pingExecute);
 commands.set('waifu', waifuExecute);
+commands.set('rock-paper-scissor', rockPaperScissor);
 
 client.on('ready', () => {
   console.log(`🟢 Logged in as ${client.user.tag}`);

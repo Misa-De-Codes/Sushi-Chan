@@ -6,7 +6,7 @@ export const data = new SlashCommandBuilder()
 
 export async function execute(interaction) {
   await interaction.reply({
-    content: '**Available Commands:**\n> `/help` - Shows this help message\n> `/ping` - Pong! 🏓',
+    content: '**Available Commands:**\n> `/help` - Shows this help message\n> `/ping` - Pong! 🏓\n> `/waifu` - Shows this waifu \n>',
     ephemeral: true, // only visible to the user
   });
 }

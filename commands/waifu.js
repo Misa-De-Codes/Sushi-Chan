@@ -7,9 +7,9 @@ export const data = new SlashCommandBuilder()
 
 export async function execute(interaction) {
   try {
-    const response = await fetch('https://waifu.pics/api/v1/waifu/random');
+    const response = await fetch('https://api.waifu.pics/sfw/waifu');
     const data = await response.json();
-
+    console.log(data)
     const flirtyMessages = [
       "Is it hot in here, or is it just you? 💖",
       "You've summoned me, senpai~ ✨",
@@ -25,7 +25,7 @@ export async function execute(interaction) {
       .setDescription(randomMessage)
       .setImage(data.url)
       .setColor(0xFFC0CB)
-      .setFooter({ text: 'Powered by Waifu.pics API' });
+      .setFooter({ text: 'Powered by Waifu.pics MUSA' });
 
     await interaction.reply({ embeds: [embed] });
   } catch (error) {
