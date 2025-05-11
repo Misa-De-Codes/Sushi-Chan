@@ -1,4 +1,5 @@
 import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
+import fs from "fs"
 import fetch from 'node-fetch';
 
 export const data = new SlashCommandBuilder()
@@ -9,7 +10,14 @@ export async function execute(interaction) {
   try {
     const response = await fetch('https://api.waifu.pics/sfw/waifu');
     const data = await response.json();
-    console.log(data)
+
+    fs.appendFile('./config/waifuUrl.txt', `\nUrl: ${data.url}`, (err) => {
+      if (err) {
+        console.error(`Error: ${err}`)
+      }
+    })
+    
+ //   console.log(data)
     const flirtyMessages = [
       "Is it hot in here, or is it just you? 💖",
       "You've summoned me, senpai~ ✨",

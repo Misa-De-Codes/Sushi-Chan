@@ -15,7 +15,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const commands = new Collection();
 commands.set('help', helpExecute);
 commands.set('ping', pingExecute);
-commands.set('waifu', waifuExecute);
+commands.set('invite', waifuExecute);
 commands.set('rock-paper-scissor', rockPaperScissor);
 
 client.on('ready', () => {
