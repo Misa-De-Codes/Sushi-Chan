@@ -1,4 +1,4 @@
-console.log("hi im sushi")
+console.log("hi im Susie")
 
 
 import { Client, Collection, GatewayIntentBits } from 'discord.js';
